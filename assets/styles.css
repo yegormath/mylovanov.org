@@ -1,0 +1,215 @@
+/* Базовий стиль для випадаючого списку */
+.navbar .dropdown-menu {
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  visibility: hidden;
+  filter: blur(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease, visibility 0.5s ease;
+  transform-origin: top center;
+}
+
+/* Відображення випадаючого списку при наведенні */
+.navbar .dropdown:hover .dropdown-menu,
+.navbar .dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  visibility: visible; /* Додаємо затримку */
+  filter: blur(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease, visibility 0s ease;
+}
+
+/* Базовий стиль для стрілки */
+.dropdown-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-size: 0.9em;
+}
+
+/* Поворот стрілки при наведенні */
+.navbar .dropdown:hover .dropdown-arrow,
+.navbar .dropdown:focus-within .dropdown-arrow {
+  transform: rotate(180deg);
+  color: #007bff;
+}
+
+/* Стиль для прапорів */
+.flag-icon {
+  width: 20px;
+  height: 15px;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Збільшення прапора при наведенні */
+.navbar .dropdown-menu li:hover .flag-icon {
+  transform: scale(1.2);
+}
+
+/* Загальний стиль для темної теми */
+body {
+  background-color: #121212; /* Темний фон */
+  color: #f5f5f5; /* Світлий текст */
+  font-family: 'Roboto', sans-serif; /* Витончений шрифт */
+}
+
+/* Стиль заголовка */
+h1, h2, h3, h4, h5, h6 {
+  color: #ff4d4f; /* Насичений червоний */
+  font-weight: bold;
+}
+
+/* Навігаційна панель */
+.navbar {
+  background-color: #1e1e1e; /* Темніший фон для контрасту */
+  border-bottom: 2px solid #ff4d4f; /* Червона межа */
+}
+
+.navbar a {
+  color: #f5f5f5; /* Світлий текст */
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #ff4d4f; /* Червоний текст при наведенні */
+}
+
+/* Випадаюче меню */
+.dropdown-menu {
+  background-color: #1e1e1e; /* Темний фон */
+  border: 1px solid #ff4d4f; /* Червона межа */
+}
+
+.dropdown-menu a {
+  color: #f5f5f5;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ff4d4f; /* Червоне тло при наведенні */
+  color: #ffffff; /* Білий текст */
+}
+
+/* Кнопка "Донат" */
+.navbar .donate-button {
+  background-color: #ff4d4f;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .donate-button:hover {
+  background-color: #e43e3e; /* Трохи темніший червоний */
+}
+
+/* Стиль прапорів */
+.flag-icon {
+  width: 20px;
+  height: 15px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Посилання */
+a {
+  color: #ff4d4f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e43e3e; /* Темніший червоний */
+  text-decoration: underline;
+}
+
+/* Define custom fonts */
+@font-face {
+  font-family: 'Fixel';
+  src: url('fonts/FixelVariable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fixel';
+  src: url('fonts/FixelVariableItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Apply the custom fonts */
+body {
+  font-family: 'Fixel', sans-serif;
+  background-color: #121212; /* Optional: dark theme background */
+  color: #f5f5f5; /* Optional: light text color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fixel', sans-serif;
+  color: #ff4d4f; /* Red accent for headers */
+  font-weight: bold;
+}
+
+
+/* Базова темна тема */
+body.dark-theme {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
+  color: #ff4d4f;
+}
+
+body.dark-theme .navbar {
+  background-color: #1e1e1e;
+  border-bottom: 2px solid #ff4d4f;
+}
+
+body.dark-theme a {
+  color: #ff4d4f;
+}
+
+body.dark-theme a:hover {
+  color: #e43e3e;
+}
+
+/* Make navbar links bold */
+.navbar a {
+  font-weight: bold; /* Bold text */
+}
+
+.navbar .navbar-nav {
+  font-weight: bold;
+}
+
+/* Зменшення розміру сабтайтлів */
+.subtitle {
+  font-size: 17px; /* Наприклад, 14px */
+  font-weight: normal; /* Зробити менш жирним, якщо потрібно */
+}
+
+/* Простір між фото і навігаційною панеллю */
+.profile-section {
+  margin-top: 20px; /* Збільшує відстань між фотографією і навігаційною панеллю */
+}
+
+/* Іконки соціальних мереж */
+.social-icons {
+  display: flex; /* Встановлює іконки в один ряд */
+  justify-content: center; /* Центрує іконки */
+  gap: 15px; /* Відстань між іконками */
+}
+
+.social-icons img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%; /* Робить іконки круглими */
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1); /* Легка анімація збільшення при наведенні */
+}
+
+
