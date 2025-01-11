@@ -1,0 +1,38 @@
+project:
+  type: website
+
+website:
+  search: false
+  navbar:
+    left:
+      - href: index.qmd
+        text: Тимофій Милованов
+      - href: pages/kse.qmd
+        text: KSE
+      - href: pages/research.qmd
+        text: Дослідження
+      - href: pages/contact.qmd
+        text: Контакти
+      - href: pages/media.qmd
+        text: Медійна діяльність
+    right:
+      - text: "<span class='language-selector'>UA</span><span class='dropdown-arrow'>"
+        menu:
+          - text: "<img src='assets/flags/ua.png' alt='UA' class='flag-icon'> Українська"
+            href: index.qmd?lang=ua
+          - text: "<img src='assets/flags/en.png' alt='EN' class='flag-icon'> English"
+            href: index.qmd?lang=en
+          - text: "<img src='assets/flags/ru.png' alt='RU' class='flag-icon'> Русский"
+            href: https://foundation.kse.ua/en/donation/
+      - text: "Донат"
+        href: https://foundation.kse.ua/en/donation/
+
+format:
+  html:
+    theme:
+      - flatly
+    css: assets/styles.css
+    toc: true
+
+
+
